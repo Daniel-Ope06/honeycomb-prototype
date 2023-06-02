@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cytncs5e7wb5c"]
+
+[ext_resource type="Texture2D" uid="uid://41bhqecml6b7" path="res://assets/cell_spritesheet.png" id="1_d26cm"]
+[ext_resource type="Script" path="res://scripts/model_scripts/Cell.gd" id="1_k81v5"]
+[ext_resource type="Texture2D" uid="uid://dpwkpa574kemu" path="res://assets/numbers_brown_spritesheet.png" id="2_0n7am"]
+[ext_resource type="Texture2D" uid="uid://e2v33eaj8w5" path="res://assets/numbers_white_spritesheet.png" id="3_ps0vp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_k81v5")
+
+[node name="CellBackground" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_d26cm")
+hframes = 3
+
+[node name="BrownNumbers" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("2_0n7am")
+hframes = 4
+
+[node name="WhiteNumbers" type="Sprite2D" parent="."]
+position = Vector2(10, 0)
+scale = Vector2(5, 5)
+texture = ExtResource("3_ps0vp")
+hframes = 4
