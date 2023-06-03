@@ -14,6 +14,8 @@ enum CellController { COMPUTER, PLAYER }
 func set_cell_value(value: int):
 	if value >= 0 and value <= 3:
 		cell_value = value
+		$BrownNumbers.frame = cell_value
+		$WhiteNumbers.frame = cell_value
 	else:
 		print("Invalid cell value. Only 0, 1, 2, or 3 are allowed.")
 
