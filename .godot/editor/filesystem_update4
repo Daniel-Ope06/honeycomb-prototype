@@ -1,2 +1,3 @@
 res://models/Cell.tscn
 res://scripts/model_scripts/Cell.gd
+res://models/Honeycomb.tscn
