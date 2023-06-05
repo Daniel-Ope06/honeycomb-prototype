@@ -19,39 +19,39 @@ func hide_cell_value() -> void:
 # Set Methods
 func set_cell_value(value: int) -> void:
 	if value >= 0 and value <= 3:
-		cell_value = value
-		$BrownNumbers.frame = cell_value
-		$WhiteNumbers.frame = cell_value
+		self.cell_value = value
+		$BrownNumbers.frame = self.cell_value
+		$WhiteNumbers.frame = self.cell_value
 	else:
 		print("Invalid cell value. Only 0, 1, 2, or 3 are allowed.")
 
 func set_cell_color(selected_color: CellColor) -> void:
-	cell_color = selected_color
-	match cell_color:
+	self.cell_color = selected_color
+	match self.cell_color:
 		CellColor.YELLOW: $CellBackground.frame = 0
 		CellColor.ORANGE: $CellBackground.frame = 1
 		CellColor.GRAY: $CellBackground.frame = 2
 
 func set_cell_position(pos: Vector2) -> void:
-	cell_position = pos
-	position = cell_position
+	self.cell_position = pos
+	position = self.cell_position
 
 func set_cell_controller(controller: CellController) -> void:
-	cell_controller = controller
-	match cell_controller:
+	self.cell_controller = controller
+	match self.cell_controller:
 		CellController.COMPUTER: $BrownNumbers.visible = false; $WhiteNumbers.visible = true
 		CellController.PLAYER: $BrownNumbers.visible = true; $WhiteNumbers.visible = false 
 
 
 # Get Methods
 func get_cell_value() -> int:
-	return cell_value
+	return self.cell_value
 
 func get_cell_color() -> CellColor:
-	return cell_color
+	return self.cell_color
 
 func get_cell_position() -> Vector2:
-	return cell_position
+	return self.cell_position
 
 func get_cell_controller() -> CellController:
-	return cell_controller
+	return self.cell_controller
